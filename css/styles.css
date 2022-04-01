@@ -1,3 +1,15 @@
-body {
-    background-color: aqua;
+
+
+#grid_container { 
+    display: grid;
+    width: 500px;
+    height: 500px;
+    row-gap: 1px;
+    column-gap: 1px;
 }
+
+.grid-item { 
+    background-color: black;
+
+}
+

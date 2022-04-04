@@ -12,13 +12,30 @@
 <body>
     <h1>Etch-a-sketch</h1>
     <div>
+        <div id="grid_container"></div>
         <div id="control_panel">
 
-        </div>
-        <div id="grid_container">
-
+            <div id="mode_selector">
+                <button id="color">Color mode</button>
+                <button id="rainbow">Rainbow mode</button>
+                <button id="eraser">Eraser</button>
+                <button id="clear">Clear</button>
+            </div>
+            <label id="size_selector_display" for="size_selector"></label>
+            <input id="size_selector" type="range" min="1" max="64" value="16">
         </div>
     </div>
+    <footer class="footer">
+        <p>
+            Copyright ©
+            <script>
+                document.write(new Date().getFullYear())
+            </script>
+            vlaurencena
+        </p>
+        <a href="https://github.com/vlaurencena" target="_blank">
+            <i class="fab fa-github" aria-hidden="true"></i></a>
+    </footer>
     <script src="js/script.js"></script>
 </body>
 

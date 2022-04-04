@@ -1,15 +1,41 @@
-
-
-#grid_container { 
-    display: grid;
-    width: 500px;
-    height: 500px;
-    row-gap: 1px;
-    column-gap: 1px;
+#grid_container {
+  display: grid;
+  width: 500px;
+  height: 500px;
+  box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
+  margin: 0 auto;
 }
 
-.grid-item { 
-    background-color: black;
+.grid-item {
+  /* background-color: #333333; */
+}
 
+
+#control_panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+#mode_selector {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+button {
+  min-width: 150px;
+  min-height: 41px;
+  border: 0;
+  background-color: transparent;
+  border: 1px solid #333333;
+  border-radius: 5px;
+}
+
+button.active {
+    color: #ffffff;
+    background-color: #333333;
 }
 

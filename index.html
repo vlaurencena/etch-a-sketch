@@ -5,24 +5,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="media/favicon.ico">
+    <!-- CSS -->
     <link rel="stylesheet" href="css/styles.css">
-    <title>Document</title>
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;900&display=swap" rel="stylesheet">
+    <title>Etch-a-sketch</title>
 </head>
 
 <body>
     <h1>Etch-a-sketch</h1>
-    <div>
+    <div id="etch-a-sketch-container">
         <div id="grid_container"></div>
         <div id="control_panel">
-
+            <input id="color_selector" type="color">
             <div id="mode_selector">
-                <button id="color">Color mode</button>
-                <button id="rainbow">Rainbow mode</button>
-                <button id="eraser">Eraser</button>
-                <button id="clear">Clear</button>
+            <button id="color" class="active">Color mode</button>
+            <button id="rainbow">Rainbow mode</button>
+            <button id="eraser">Eraser</button>
+            <button id="clear">Clear</button>
             </div>
-            <label id="size_selector_display" for="size_selector"></label>
-            <input id="size_selector" type="range" min="1" max="64" value="16">
+            <div class="size-selector-container">
+                <label id="size_selector_display" for="size_selector"></label>
+                <input id="size_selector" type="range" min="1" max="64" value="16">
+            </div>
         </div>
     </div>
     <footer class="footer">
@@ -34,8 +43,10 @@
             vlaurencena
         </p>
         <a href="https://github.com/vlaurencena" target="_blank">
-            <i class="fab fa-github" aria-hidden="true"></i></a>
+            <img src="media/github-icon.png" /></a>
+        <!-- TODO GITHUB ICON-->
     </footer>
+    <!-- SCRIPT -->
     <script src="js/script.js"></script>
 </body>
 

@@ -1,15 +1,29 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: #ededed;
+  font-family: "Roboto", sans-serif;
+}
+
+h1 {
+  text-align: center;
+  font-size: 80px;
+}
+
 #grid_container {
   display: grid;
-  width: 500px;
-  height: 500px;
+  width: 300px;
+  height: 300px;
   box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
   margin: 0 auto;
+  background-color: #ffffff;
 }
-
-.grid-item {
-  /* background-color: #333333; */
-}
-
 
 #control_panel {
   display: flex;
@@ -18,11 +32,34 @@
   gap: 10px;
 }
 
+input[type="color"] {
+  -webkit-appearance: none;
+  width: 80px;
+  height: 80px;
+  border: none;
+  background-color: transparent;
+}
+
+input[type="color"]::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+input[type="color"]::-webkit-color-swatch {
+  border: none;
+  border-radius: 50px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+button,
+input {
+  cursor: pointer;
+}
+
 #mode_selector {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
 }
 
 button {
@@ -34,8 +71,75 @@ button {
   border-radius: 5px;
 }
 
-button.active {
-    color: #ffffff;
-    background-color: #333333;
+button#clear:active {
+  color: #ffffff;
+  background-color: #333333;
 }
 
+button.active {
+  color: #ffffff;
+  background-color: #333333;
+}
+
+.size-selector-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer {
+  margin-top: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+footer img {
+  width: 24px;
+  transition: transform 0.3s ease-in-out;
+}
+
+footer img:hover {
+  transform: rotate(360deg) scale(1.2);
+}
+
+button,
+input[type="color"] {
+  transition: transform 0.1s ease-in-out;
+}
+
+button:hover,
+input[type="color"]:hover {
+  transform: scale(1.05);
+}
+
+/* TABLET AND DESKTOP */
+@media only screen and (min-width: 650px) {
+  #etch-a-sketch-container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    gap: 50px;
+  }
+
+  #control_panel {
+    justify-content: space-between;
+  }
+
+  #grid_container {
+    width: 400px;
+    height: 400px;
+    margin: 0;
+  }
+}
+
+@media only screen and (min-width: 850px) {
+  #etch-a-sketch {
+    align-self: flex-start;
+  }
+  #grid_container {
+    width: 500px;
+    height: 500px;
+  }
+}
